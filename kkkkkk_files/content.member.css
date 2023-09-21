@@ -1,0 +1,903 @@
+@charset "utf-8";
+
+/* 회원가입 */
+.memberP .formArea.regBasicC .gInputText.name {
+    width: 280px;
+}
+
+.memberP .formArea.regBasicC .gInputText.id {
+    width: 280px;
+}
+
+/* <!-- 2021-06-28 class 추가 bnstylewidth --> */
+.memberP .formArea.regBasicC .gInputText.id.bnstylewidth {
+    width: 100%;
+}
+
+.memberP .formArea.regBasicC .gInputText.emailID {
+    width: 170px;
+}
+
+.memberP .formArea.regBasicC .gInputText.emailAddress1 {
+    width: 150px;
+}
+
+.memberP .formArea.regBasicC .gInputText.authNum {
+    width: 170px;
+}
+
+.memberP .formArea.regBasicC .gInputText.pw {
+    width: 380px;
+}
+
+/* <!-- 2021-06-28 class 추가 bnstylewidth --> */
+.memberP .formArea.regBasicC .gInputText.pw.bnstylewidth {
+    width: 100%
+}
+
+.memberP .formArea.regBasicC .gInputText.pwAgain {
+    width: 380px;
+}
+
+/* <!-- 2021-06-28 class 추가 bnstylewidth --> */
+.memberP .formArea.regBasicC .gInputText.pwAgain.bnstylewidth {
+    width: 100%;
+}
+
+.memberP .formArea.regBasicC .fSelect.tel1 {
+    width: 100px;
+}
+
+.memberP .formArea.regBasicC .gInputText.tel2 {
+    width: 100px;
+}
+
+.memberP .formArea.regBasicC .gInputText.tel3 {
+    width: 100px;
+}
+
+.memberP .formArea.regBasicC .fSelect.job {
+    min-width: 100px;
+}
+
+.memberP .formArea.regBasicC .fSelect.major1 {
+    min-width: 100px;
+}
+
+.memberP .formArea.regBasicC .fSelect.major2 {
+    min-width: 100px;
+}
+
+.memberP .formArea.regAuthorC .gInputText.nameKor {
+    width: 170px;
+}
+
+.memberP .formArea.regAuthorC .gInputText.nameEng {
+    width: 170px;
+}
+
+.memberP .formArea.regAuthorC .gInputText.emailID {
+    width: 170px;
+}
+
+.memberP .formArea.regAuthorC .gInputText.emailAddress1 {
+    width: 150px;
+}
+
+.memberP .formArea.regAuthorC .gInputText.orcid {
+    width: 400px;
+    margin-left: 5px;
+}
+
+.memberP .formArea.regAuthorC .gInputText.organ1 {
+    width: 660px;
+}
+
+.memberP .formArea.regAuthorC .gInputText.organ2 {
+    width: 660px;
+}
+
+.memberP .formArea.regAuthorC .fSelect.cate1 {
+    min-width: 100px;
+}
+
+.memberP .formArea.regAuthorC .fSelect.cate2 {
+    min-width: 100px;
+}
+
+/* 아이디/비밀번호찾기 */
+.memberP .findArea {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.memberP .findArea:after {
+    display: block;
+    width: 0;
+    height: 0;
+    content: "";
+    clear: both;
+}
+
+.memberP .findArea .gLeft {
+    float: left;
+    width: calc(50% - 28px);
+    margin-right: 28px;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+}
+
+.memberP .findArea .gRight {
+    float: right;
+    width: calc(50% - 28px);
+    margin-left: 28px;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+}
+
+.memberP .findArea .findWrap {
+    width: 100%;
+    float: right;
+    border-left: 8px solid #f04349;
+    border-radius: 4px;
+}
+
+.memberP .findArea .findWrap .tit {
+    border-bottom: 1px solid #eeeeee;
+    font-size: 16px;
+    color: #111111;
+    font-family: 'notokr-bold', sans-serif;
+    padding: 21px 0 20px 19px;
+}
+
+.memberP .findArea .findWrap .findBox {
+    padding: 20px 20px;
+}
+
+.memberP .findArea .findWrap .findBox ul {
+    overflow: hidden;
+}
+
+.memberP .findArea .findWrap .findBox ul li {
+    position: relative;
+    padding: 0 0 0 42px;
+    margin-bottom: 10px;
+    min-height: 32px;
+}
+
+.memberP .findArea .findWrap .findBox ul li:last-child {
+    margin-bottom: 0px;
+}
+
+.memberP .findArea .findWrap .findBox ul li span.subTit {
+    position: absolute;
+    left: -1px;
+    top: 8px;
+    font-size: 14px;
+    color: #111111;
+}
+
+.memberP .findArea .findWrap .findBox ul li .gInputText.emailID {
+    width: calc((100% - 134px) / 2);
+}
+
+.memberP .findArea .findWrap .findBox ul li .gInputText.emailAddress {
+    width: calc((100% - 135px) / 2);
+}
+
+.memberP .findArea .findWrap .findBox ul li .gInputText .placeholder {
+    margin-top: -8px;
+}
+
+.memberP .findArea .findWrap .findBox ul li .gInputText .fText {
+    border: 1px solid #aaaaaa;
+    height: 32px;
+}
+
+.memberP .findArea .findWrap .findBox ul li .fSelect {
+    border: 1px solid #aaaaaa;
+    height: 32px;
+    width: 110px;
+}
+
+.memberP .findArea .findWrap .findBox ul li .fSelect span {
+    line-height: 30px;
+}
+
+/* 관심분야 추가 2021-07-06 */
+.thesisAlarmArea .comtBox .gRight {
+    position: absolute;
+    right: 0;
+    top: 1px;
+}
+
+.comtBox .gRight button.btnIconB {
+    border: 1px solid #c8c8c8 !important;
+    color: #333333;
+    padding: 6px 9px 4px;
+    min-width: 71px;
+}
+
+.comtBox .gRight button.btnIconB span {
+    font-size: 12px;
+}
+
+.comtBox .gRight button.btnIconB span.bell {
+    margin: 0 2px 0 1px;
+}
+
+.comtBox .gRight button.btnIconB span:before {
+    width: 14px;
+    height: 14px;
+}
+
+.comtBox .gRight button.btnIconB span.bell:before {
+    background-position: -250px -250px;
+}
+
+.comtBox .gRight button.btnIconB.selected span.bell:before {
+    background-position: -300px -250px;
+}
+
+.alarmGroup {
+    border: 1px solid #e9e9e9;
+}
+
+.alarmGroup + .alarmGroup {
+    margin-top: 15px;
+}
+
+.alarmGroup .alarmBody {
+    padding: 23px 24px 3px;
+    padding: 20px 24px 3px;
+    overflow: hidden;
+}
+
+.alarmGroup .alarmBody ul.list { /* overflow: hidden; */
+}
+
+.alarmGroup .alarmBody ul.list li {
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 87px;
+}
+
+.alarmGroup .alarmBody ul.list li.btnArea {
+    padding-right: 120px;
+}
+
+.alarmGroup .alarmBody ul.list li p.tit {
+    font-size: 14px;
+    color: #777777;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.alarmGroup .alarmBody ul.list li p.cont {
+    font-size: 14px;
+}
+
+.alarmGroup .alarmBody ul.list li p.cont small {
+    font-size: 14px; /* max-width: 200px; */
+    max-width: 70%;
+}
+
+.alarmGroup .alarmBody ul.list li .gRight {
+    position: absolute;
+    right: 0;
+    top: -4px;
+}
+
+.alarmGroup .alarmBody p.desc {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 17px;
+}
+
+.alarmGroup .alarmBody ul.cate {
+    overflow: hidden;
+    margin-bottom: 11px;
+}
+
+/* 2021-07-07 기본값 수정 */
+/* .alarmGroup .alarmBody ul.cate li {float: left;margin-right: 10px;margin-bottom: 10px;border: 1px solid #8aa1ec;color: #3c63e0;font-family: 'notokr-bold', sans-serif;padding: 3px 6px 5px;} */
+.alarmGroup .alarmBody ul.cate li {
+    font-size: 13px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #8aa1ec;
+    color: #3c63e0;
+    font-family: 'notokr-regular', sans-serif;
+    padding: 3px 6px 5px;
+}
+
+.alarmGroup .alarmBody .titleBox {
+    border-bottom: 1px solid #c8c8c8;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.alarmGroup .alarmBody .titleBox p.tit {
+    font-size: 18px;
+    font-size: 17px;
+    color: #111111;
+    font-family: 'notokr-medium', sans-serif;
+    padding-right: 120px;
+}
+
+.alarmGroup .alarmBody .titleBox .gRight {
+    position: absolute;
+    right: 0;
+    top: -4px;
+}
+
+.alarmGroup .alarmBody ul.keyword {
+    overflow: hidden;
+    padding: 15px 0 8px;
+}
+
+.alarmGroup .alarmBody ul.keyword li {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #555555;
+    padding: 6px 10px 8px;
+    background: #f0f0f0;
+    border-radius: 3px;
+}
+
+.alarmGroup .alarmFoot {
+    border-top: 1px solid #eeeeee;
+    background: #fafafa;
+    padding: 15px 24px 13px;
+    position: relative;
+}
+
+.alarmGroup .alarmFoot p.date {
+    font-size: 12px;
+    color: #999999;
+}
+
+.alarmGroup .alarmFoot .gRight {
+    position: absolute;
+    right: 28px;
+    top: 14px;
+}
+
+.alarmGroup .alarmFoot button.btnIconB span.tresh:before {
+    background: url(../images/common/common_sfix_icon.png) no-repeat;
+    width: 16px;
+    height: 14px;
+    background-position: -300px -150px;
+}
+
+.alarmGroup .alarmFoot button.btnIconB:hover span.tresh:before {
+    background: url(../images/mystudy/mystudy_sfix_icon.png) no-repeat;
+    background-position: -150px 0px;
+}
+
+
+@media (min-width: 960px) and (max-width: 1147px) {
+    /* 태블릿: 최소 960 ~ 1147 */
+
+}
+
+@media (max-width: 959px) {
+    /* 모바일: 최대 959 */
+    /* 회원가입 */
+    .memberP .formArea.regBasicC .gInputText.name {
+        width: 100%;
+    }
+
+    .memberP .formArea.regBasicC .gInputText.id {
+        width: 100%;
+    }
+
+    .memberP .formArea.regBasicC .gInputText.emailID {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .memberP .formArea.regBasicC .gInputText.emailAddress1 {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .memberP .formArea.regBasicC .gInputText.authNum {
+        width: 100%;
+    }
+
+    .memberP .formArea.regBasicC .gInputText.pw {
+        width: 100%;
+    }
+
+    .memberP .formArea.regBasicC .tooltipWrap {
+        display: none;
+    }
+
+    .memberP .formArea.regBasicC .gInputText.pwAgain {
+        width: 100%;
+    }
+
+    .memberP .formArea.regBasicC .fSelect.tel1 {
+        width: calc((100% - 31px) / 3);
+    }
+
+    .memberP .formArea.regBasicC .gInputText.tel2 {
+        width: calc((100% - 31px) / 3);
+    }
+
+    .memberP .formArea.regBasicC .gInputText.tel3 {
+        width: calc((100% - 31px) / 3);
+    }
+
+    .memberP .formArea.regBasicC .fSelect.job {
+        min-width: 100px;
+        width: 100%;
+    }
+
+    .memberP .formArea.regBasicC .fSelect.major1 {
+        min-width: 100%;
+    }
+
+    .memberP .formArea.regBasicC .fSelect.major2 {
+        min-width: 100%;
+    }
+
+    .memberP .formArea.regBasicC .verMiddle {
+        padding: 5px 0px;
+    }
+
+    .memberP .formArea.regAuthorC .gInputText.nameKor {
+        width: 100%;
+    }
+
+    .memberP .formArea.regAuthorC .gInputText.nameEng {
+        width: 100%;
+    }
+
+    .memberP .formArea.regAuthorC .gInputText.emailID {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .memberP .formArea.regAuthorC .gInputText.emailAddress1 {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .memberP .formArea.regAuthorC button {
+        margin-left: 0px;
+        margin-top: 10px;
+        min-width: 34px !important;
+    }
+
+    .memberP .formArea.regAuthorC .gInputText.orcid {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .memberP .formArea.regAuthorC .gInputText.organ1 {
+        width: 100%;
+    }
+
+    .memberP .formArea.regAuthorC .gInputText.organ2 {
+        width: 100%;
+    }
+
+    .memberP .formArea.regAuthorC .fSelect.cate1 {
+        min-width: 100%;
+    }
+
+    .memberP .formArea.regAuthorC .fSelect.cate2 {
+        min-width: 100%;
+    }
+
+    .memberP .formArea.regAuthorC .formGroup ul.addRow li {
+        margin-top: 10px;
+    }
+
+    .memberP .formArea.regAuthorC .verMiddle {
+        padding: 5px 0px;
+    }
+
+    /* 아이디/비밀번호찾기 */
+    .memberP .findArea .gLeft {
+        float: none;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .memberP .findArea .gRight {
+        float: none;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .memberP .findArea .findWrap {
+        float: none;
+    }
+
+    .memberP .findArea .findWrap .findBox ul li {
+        padding: 0 0 0 0;
+        margin-bottom: 10px;
+    }
+
+    .memberP .findArea .findWrap .findBox ul li span.subTit {
+        position: static;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .memberP .findArea .findWrap .findBox ul li .gInputText.emailID {
+        width: calc((100% - 18px) / 2);
+    }
+
+    .memberP .findArea .findWrap .findBox ul li .gInputText.emailAddress {
+        width: calc((100% - 19px) / 2);
+    }
+
+}
+
+/* <!-- 2021-06-28 2차프로젝트 비엔시스템class 추가  --> */
+/* 2021-06-28 회원가입페이지 시작(registration.html,registration_en.html*/
+.container .bntitletext {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'notokr-bold';
+    margin-bottom: 40px;
+}
+
+.container .bninfotext {
+    font-size: 16px;
+    font-family: 'notokr-regular';
+}
+
+.container .formGroup .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 12px;
+    width: 18px;
+    height: 20px;
+    background: url(../images/common/membericon.png) no-repeat center center;
+}
+
+#tel_icon_id {
+    height: 22px;
+}
+
+#mail_icon_id {
+    width: 23px;
+}
+
+.container .bnredstar {
+    position: absolute;
+    color: #DB3A3F;
+    left: 30px;
+    top: 5px;
+    font-size: 14px;
+}
+
+/* 2021-07-07 반응형 툴팁 위치 이동   */
+.tooltip .desc.topRight {
+    bottom: -107px;
+    right: -10px;
+}
+
+.tooltip .desc.topRight:before {
+    display: none;
+}
+
+.tooltip .desc.topRight::after {
+    display: none;
+}
+
+.tooltip .desc.bottomRight {
+    right: -163px;
+}
+
+.tooltip .desc.bottomRight:before {
+    right: 167px;
+}
+
+/* 2021-07-19 김준수 CSS 수정 */
+.tooltip .desc.bottomRight:after {
+    right: 167px;
+}
+
+/* 2021-07-15 클레스 추가 */
+.bnsubtt {
+    font-size: 13px;
+    color: #cccccc;
+}
+
+
+/* 2021108 이용약관 추가 */
+.contentsWarpBig .contents_layer {
+    margin-bottom: 20px;
+}
+
+.contentsWarpBig .contents_layer h4 {
+    font-size: 13px;
+    color: #666;
+    font-family: 'notokr-bold', sans-serif;
+}
+
+.contentsWarpBig .contents_layer h4.two_num {
+    margin-left: -8px;
+}
+
+.contentsWarpBig .contents_layer dl {
+    margin-left: 14px;
+}
+
+.contentsWarpBig .contents_layer dt {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #666;
+    font-family: 'notokr-bold', sans-serif;
+}
+
+.contentsWarpBig .contents_layer dt + dd.caption-bar {
+    margin-top: 4px;
+}
+
+.contentsWarpBig .contents_layer dt + dd.num_depth2 {
+    margin-top: 4px;
+}
+
+.contentsWarpBig .contents_layer dd {
+    margin-left: 14px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666;
+    line-height: 16px;
+}
+
+.contentsWarpBig .contents_layer .caption {
+    margin-left: 18px;
+    margin-top: 4px;
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle {
+    padding-left: 0px;
+    line-height: 1.5em;
+}
+
+/* 작은 ② 넘버 스타일*/
+.contentsWarpBig .contents_layer dd.num_depth_circle p {
+    padding-left: 17px;
+    margin: 0;
+    position: relative;
+}
+
+/* 작은 ② 넘버 스타일*/
+.contentsWarpBig .contents_layer dd.num_depth_circle p:before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    display: block;
+    content: "";
+    width: 13px;
+    height: 20px;
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num01:before {
+    content: "①";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num02:before {
+    content: "②";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num03:before {
+    content: "③";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num04:before {
+    content: "④";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num05:before {
+    content: "⑤";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num06:before {
+    content: "⑥";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num07:before {
+    content: "⑦";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num08:before {
+    content: "⑧";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num09:before {
+    content: "⑨";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth_circle p.num10:before {
+    content: "⑩";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2 {
+    padding-left: 17px;
+    margin: 0;
+    position: relative;
+    margin-left: 17px;
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2:before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    display: block;
+    content: "";
+    width: 13px;
+    height: 20px;
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num01:before {
+    content: "①";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num02:before {
+    content: "②";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num03:before {
+    content: "③";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num04:before {
+    content: "④";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num05:before {
+    content: "⑤";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num06:before {
+    content: "⑥";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num07:before {
+    content: "⑦";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num08:before {
+    content: "⑧";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num09:before {
+    content: "⑨";
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2.num10:before {
+    content: "⑩";
+}
+
+.contentsWarpBig .contents_layer dd.caption {
+    margin-top: 4px;
+    margin-left: 14px;
+    font-size: 13px;
+    color: #666;
+    line-height: 16px;
+}
+
+.contentsWarpBig .contents_layer dd.caption-bar {
+    margin-top: 0px;
+    margin-left: 25px;
+}
+
+.contentsWarpBig .contents_layer dd.caption-bar p {
+    margin-bottom: 0px;
+    padding-left: 14px;
+    line-height: 16px;
+    position: relative;
+}
+
+.contentsWarpBig .contents_layer dd.caption-bar p:before {
+    position: absolute;
+    top: 10px;
+    left: 4px;
+    display: block;
+    content: "";
+    width: 4px;
+    height: 1px;
+    background: #717171;
+}
+
+.contentsWarpBig .contents_layer dd.num_depth2 p {
+    margin-left: 16px;
+}
+
+.contentsWarpBig .contents_layer .caption-num {
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+.contentsWarpBig .contents_layer .caption-num li {
+    list-style-type: decimal;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.contentsWarpBig .ol_depth h5 {
+    margin-left: 18px;
+    font-size: 13px;
+    color: #666;
+    font-family: 'notokr-bold', sans-serif;
+}
+
+.contentsWarpBig .ol_depth ul {
+    margin-left: 55px;
+    margin-top: 7px;
+}
+
+.contentsWarpBig .ol_depth ul.block-blank {
+    margin-bottom: 8px;
+}
+
+.contentsWarpBig .ol_depth li {
+    list-style-type: disc;
+    padding-left: 2px;
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.contentsWarpBig ul.old li {
+    margin-top: 5px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.contentsWarpBig ul.old li:first-child {
+    margin-top: 0px;
+}
+
+.contentsWarpBig ul.old_disc li {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.contentsWarpBig ul.old_disc li:first-child {
+    margin-top: 0px;
+}
+
+.contentsWarpBig p {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #666;
+    line-height: 16px;
+}
+
+.contentsWarpBig p.history {
+    margin-bottom: 0px;
+}
+
+.contentsWarpBig a {
+    color: #3c63e0;
+    cursor: pointer;
+}
+
+.contentsWarpBig .block-blank {
+    margin-bottom: 20px;
+}
+
+
+/* prevent css vanishing */
+/* prevent css vanishing */
+/* prevent css vanishing */
+/* prevent css vanishing */
+/* prevent css vanishing */
+/* prevent css vanishing */
+/* prevent css vanishing */
+/* prevent css vanishing */

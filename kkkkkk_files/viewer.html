@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///Users/anseungchan/Desktop/%E3%85%85/aaaaa_files/viewer.html -->
+<html dir="ltr" mozdisallowselectionprint="" style="--sidebar-width: 435px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="google" content="notranslate">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>PDF.js viewer</title>
+
+    <!-- This snippet is used in production (included from viewer.html) -->
+    <link rel="resource" type="application/l10n" href="https://www.dbpia.co.kr/pdfviewer/web/locale/locale.properties">
+    <script src="./pdf.js"></script>
+
+    <link rel="stylesheet" href="./viewer.css">
+    <link rel="stylesheet" type="text/css" href="./toastify(1).css">
+	<link href="./css2" rel="stylesheet">
+
+    <script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+    <script src="./fabric.js"></script>
+    <script src="./uuidv4.min.js"></script>
+    <script src="./viewer.js"></script>
+    <script src="./custom.js"></script>
+    <script src="./autosize.min.js"></script>
+    <script src="./html2canvas.min.js"></script>
+    <script src="./jspdf.umd.min.js"></script>
+    <script src="./jspdf.plugin.autotable.js"></script>
+    <script type="text/javascript" src="./toastify.js"></script>
+    <script type="text/javascript" src="./pdfStatistics2.js"></script>
+    <script type="text/javascript" src="./nuri_Statistics(1).js"></script>
+    <script type="text/javascript" src="./mobile_app_utils(1).js"></script>
+
+    <script type="text/javascript">
+        var ProxyUrl = (location.host.toLowerCase() != "www.dbpia.co.kr" && location.href.indexOf("www.dbpia.co.kr") > -1) ? ((location.href.indexOf("www.dbpia.co.kr") == 7) ? "http://" + location.host : location.href.substr(0, location.href.indexOf("www.dbpia.co.kr") + 15)) : "";
+    </script>
+<script src="file:///Users/anseungchan/Desktop/%E3%85%85/build/pdf.worker.js"></script><script src="file:///Users/anseungchan/Desktop/%E3%85%85/build/pdf.worker.js"></script><script src="file:///Users/anseungchan/Desktop/%E3%85%85/build/pdf.worker.js"></script></head>
+
+<body tabindex="1">
+<div id="outerContainer" class="sidebarOpenRight sidebarOpen">
+  <div id="sidebarContainer">
+    <div id="toolbarSidebar">
+      <div id="toolbarSidebarLeft">
+        <div class="splitToolbarButton toggled">
+          <button class="toolbarButton" data-l10n-id="thumbs" id="viewThumbnail" tabindex="2" title="미리보기">
+            <span data-l10n-id="thumbs_label">미리보기</span>
+          </button>
+          <button class="toolbarButton toggled" data-l10n-id="document_outline" id="viewOutline" tabindex="3" title="문서 아웃라인 보기 (더블 클릭해서 모든 항목 펼치기/접기)">
+                <span data-l10n-id="document_outline_label">문서 아웃라인</span>
+          </button>
+          <button class="toolbarButton" data-l10n-id="attachments" id="viewAttachments" style="visibility: hidden;" tabindex="4" title="첨부파일 보기" disabled="">
+            <span data-l10n-id="attachments_label">첨부파일</span>
+          </button>
+          <button class="toolbarButton" data-l10n-id="layers" id="viewLayers" style="visibility: hidden;" tabindex="5" title="레이어 보기 (더블 클릭해서 모든 레이어를 기본 상태로 재설정)" disabled="">
+            <span data-l10n-id="layers_label">레이어</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="toolbarSidebarRight">
+        <div class="" id="outlineOptionsContainer">
+          <div class="verticalToolbarSeparator" style="display: none"></div>
+
+          <button class="toolbarButton" data-l10n-id="current_outline_item" id="currentOutlineItem" style="display: none" tabindex="6" title="현재 아웃라인 항목 찾기">
+                <span data-l10n-id="current_outline_item_label">현재 아웃라인 항목</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="sidebarContent">안녕하세요 저는 어렸을 때 부터 코딩관련 분야에 많은 관심이 있었습니다. 특히 최근 정보보안분야를 공부하다보면 빠지지 않고 등장하는 부분중하나가 정보통신기술과 관련된 내용이라는 것을 알수있었습니다. 
+이번 기회를 통해 한국의 정보통신기술의 발전을 다루게 되었습니다.
+대한민국이 처음으로 자국의 힘을 활용하여 들여온 전선은 서로전신선으로 1885년 9월 덴마크와 청나라의 기술의 통해 들오어게 되었습니다. 물론 이 것보다 먼저 한국에 들어온 전선이 있었으나 이는 일본이 조선의 통치권을 독점하여 조선을 지배하기위해 그들이 직접 설치한것으로 우리나라의 정보통신역사라고 볼순 없읍니다.
+(이에 비해 서로전선은 물론 청국 기술과 자본에 의해 설치되었고 상당 기간 운영권 까지 그들 손에 있었지만, 조선정부가 가설 경비의 상당 부분과 경상유지비를 감당하고 차관을 상환해갔으니 우리의 시설로 볼수 있습니다.)
+(1902년 우리나라의 사업용 전화가 서울에서 인천까지 개통되었습니다. 이것은 한국에서의 실질적인 전화사업의 첫번째였습니다.)
+그후 1908년 한국에서 무선통신이 처음 도입되었습니다. 이 시기에 미국의 체신성 무선 전화기가 사용되었고, (이것은 해안국을 경유하여 외국의 무선전보를 대한제국 내의 각 전신국에서 취급하는 데 사용되었습니다.	)그리고 국내에서 무선통신 기술과 관련된 개발과 연구가 계속되었습니다. 그러나 일본의 통제로 인해 일제시대 속에서는 독자적인 발전이 어려웠습니다.
+해방 이후, 그 당시 미군정이 직접통치를 하고 있던시기로 미군정 당국은 통신기술자의 양성이 시급하다고 보고 체신요원 양성소를 조선체신학교로 승격시켰습니다.
+(그리고 1946년 3월 무선전문학교를 설립하여 항공회사,선박회사,방송국 등에 필요한 통신사를 배출하기 시작했습니다.)
+1948년 정부수립이 되고 전기통신사업을 추진하게 되었지면 기술,재정 등의 부족 뿐만 아니라 기존 시설을 유지보수 하는데에만도 많은 어려움을 격었습니다.
+그리고 6.25전쟁이 시작되고 매우 큰 타격을 입었습니다. 무전시설은 약 50%,전신시설은 90% 가까이 파괴되었으며, 남아있는 통신시설의 대부분은 군의 작전수행용으로 사용되었고 실질적으로 민간이이 사용할수 있는 통신은 거의 없었다고 볼수있습니다.
+휴전 후 군용 전화회선의 80% 이상을 되돌려 받고 통신시설 복구를 위한 5 개년계획을 수립하는 등의 노력으로 1958년에는 동란 전 수준으로 복구되었으 며, 1960년대 초에 이르러서는 통신수요를 어느 정도 충당할 수 있을 만큼 확 장되었다. 
+1960년대에 들어 정부 차원에서 정보통신기술의 중요성을 인식하고, 그 동안의 이ㄹ제 강점기의 법을 그대로 답습했던것에서 벗어나 1961년 전기통신과 전파관리 법을 새로 저정하였습니다, 1962년 시작된 경제개발 6개년 계획의 추진과 더불어 정부의 통신개발) 확충을 위한 노력이 뒷받치되면서 본격적인 발전이 시작되었습니다. 1962년 자동식 전화교환기의 국내 생산이 시작되었고,1965년에는 텔렉스교환기가 설치되었습니다. 1970에는 유선통신 기지국이 설치되었습니다.
+그리고 그후 1980년대 컴퓨터가 점차 보급되면서 1982년 한국은 TCP\IP에 기반을 둔 컴퓨터 네트워크를 자체적으로 구축하였습니다. 그리고 한국은 정보화 시대에 들어오게 되고 등여러 통신 기업들이 등장하였습니다. 그리고 최근 5세대 이동통신(5G)의 등장으로 우리나라는 더욱 빠른 정보통신기술을 갖추게 되었다.
+저는 처음 이 수행평가에 대하 조사를 시작했을떄는 저에게 도움이 되지않을것이라고 생각했읍니다. 하지만 한국의 정보통신의 역사들에 대해 차근차근 조사하다보니 여러 개념들의 유래와 가치등을 추가로 알수있게 되어 매우 흥미로웠습니다. 그리고 그중 가장 흥미롭게 조사하였던 부분은 tcp/ip에 관한 내용입니다.
+Tcp 프로토콜은 데이터를 전송을 할때 패킷이라는 데이터 상자에 분할하여 보냅니다. 저는 최근 이 패킷에 관한 내용을 웹 보안분야를 공부하다가 
+
+
+이러한 역사적 사실들을보고 우리나라는 20세기 초반 정보통신 기술 수준이 현재와는 비교할 수 없을 i만큼 부족했다는 것을 알수 있습니다. 
+심지어 이시기에 열린 2차 세계대전에서 독일은 무전으로 에니그마라는 암호를 사용하여 전쟁을 하였고 미국은 이 암호를 풀기위해 현대 컴퓨터의 개념을 사용한 기계까지 만들어 사용했을 정도로 매우 기술적으로 뛰어난 나라였습니다. 그러나 현재 우리나라와 미국,독일 등과 정보통신기술은 크게 차이나지 않습니다.
+저는 지금 이러한 선진국들과 이러한 기술이 크게 차이나지 않다는 사실을 알고 한국이 6.25전쟁이라는 큰 전쟁을 격고도 정보통신 분야에서 선진국들과 비교해 빠르게 발전했는지가 더욱 놀라워 졌습니다.  그리고 이 활동을 하면서 tcp/ip에 대해 조사하였습니다. 이 기술은 제가 최근까지 웹보안 공부를 하면서 배웠던 내용으로 이 활동을 하면서 기술적인 내용들은 많이 었을수 없었지만, 이 기술의 유래나 정의등을 조사를 통해 알게되어 매우 흥미로웠던 기억이있습니다.
+그리고 정보보안과 관련된 내용을 공부하면서 정보통신 기술은 현대 사회에서 더욱 더 중요해지고 있는 분야임을 깨달음과 동시에 우리나라에서의 발전가능성도 무궁무진하다는 사실을 이번활동을 통해 알게되었고 저의 꿈은 한층더 확고해졌습니다.</div>
+    <div id="sidebarResizer"></div>
+  </div>
+  <!-- sidebarContainer -->
+  <div id="sidebarContainerRight" style="font-size: 13px;">
+    <div class="rightSidebarWrapper" id="sidebarContainerRightDoubleQuotesWrapper" style="display: none;">
+      <div class="doubleQuotes-wrapper"></div>
+    <div class="double-quotes-wrapper"><div class="note-content"><div class="note-content-main"><div class="note-content-text">임정재, 윤민재. (2022). 한국사회의 공정성 인식과 주관적 행복: 세대간 차별적 관계를 중심으로. 한국사회학회 사회학대회 논문집, (), 115-116.</div><div class="note-button-wrapper"><div class="footnote-copy-button">복사</div></div></div></div></div></div>
+    <div class="rightSidebarWrapper" id="sidebarContainerRightCopyWithFootnoteWrapper" style="display: none;">
+      <div>
+        <div style="
+                border: 1px solid var(--toolbar-border-color);
+                padding: 7px;
+                background-color: #d6dce5;
+                margin-bottom: 10px;
+                margin-top: -20px;
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+              ">
+          <b style="font-size: 12.3px;">* 부분인용을 위한 텍스트를 논문 출처(각주)와 함께
+            제공합니다.</b>
+        </div>
+      </div>
+      <div class="footnote-wrapper alert-memo" style="margin-bottom: 18px;">
+        <p class="font-small">
+          각주와 함께 복사한 내용이 없습니다.
+        </p>
+        <br>
+        <p class="font-small">
+          본문의 내용을 드래그 하시면 내용을 각주와 함께 복사하실 수 있습니다.
+        </p>
+      </div>
+    </div>
+    <div class="rightSidebarWrapper" id="sidebarContainerRightNoteWrapper" style="display: flex;">
+      <div class="blur-target" style="display: flex; flex-direction: row;">
+        <input id="textSearchInput" placeholder="검색 내용을 입력하세요." style="
+                flex: 1;
+                height: 30px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                padding-left: 10px;
+                padding-right: 30px;
+                border: 1px solid var(--toolbar-border-color);
+                border-radius: var(--toolbar-border-radius);
+              " type="search" disabled="disabled">
+        <div class="popup-button" id="searchTextButton">
+          <div class="popup-icon toolbarButton search hiddenMediumView"></div>
+        </div>
+      </div>
+      <div id="currentSearchText"></div>
+      <div class="blur-target" style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 20px;
+            ">
+        <div id="searchByColorDiv" style="
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 7px 7px 7px 0px;
+              ">
+          <div class="outer-circle">
+            <div class="inner-circle filter-memo-color-picker picked-color" style="background-image: url(images/rainbow-circle.png);"></div>
+          </div>
+          <div class="outer-circle">
+            <div class="inner-circle filter-memo-color-picker" style="background-color: #ffe6a2;"></div>
+          </div>
+          <div class="outer-circle">
+            <div class="inner-circle filter-memo-color-picker" style="background-color: #ffcd45;"></div>
+          </div>
+          <div class="outer-circle">
+            <div class="inner-circle filter-memo-color-picker" style="background-color: #f1a099;"></div>
+          </div>
+          <div class="outer-circle">
+            <div class="inner-circle filter-memo-color-picker" style="background-color: #00cc63;"></div>
+          </div>
+          <div class="outer-circle">
+            <div class="inner-circle filter-memo-color-picker" style="background-color: #e44234;"></div>
+          </div>
+        </div>
+        <div class="popup-button" id="filterIconDiv" style="cursor: pointer;">
+          <div class="popup-icon toolbarButton filter hiddenMediumView"></div>
+        </div>
+      </div>
+      <div style="
+              display: flex;
+              justify-content: flex-end;
+              border-bottom: 1px solid var(--toolbar-border-color);
+              margin-bottom: 20px;
+            ">
+        <div class="checkbox-main-wrapper" id="FilterCheckboxPopupDiv" style="visibility: hidden;">
+          <div class="checkbox-wrapper">
+            <input checked="" class="filter-check-all-box" id="checkAll" style="margin-right: 5px;" type="checkbox"><label class="checkbox-label" for="checkAll">모두선택</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input checked="" class="filter-check-box" id="checkHighlight" style="margin-right: 5px;" type="checkbox"><label class="checkbox-label" for="checkHighlight">하이라이트</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input checked="" class="filter-check-box" id="checkUnderline" style="margin-right: 5px;" type="checkbox"><label class="checkbox-label" for="checkUnderline">밑줄</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input checked="" class="filter-check-box" id="checkSine" style="margin-right: 5px;" type="checkbox"><label class="checkbox-label" for="checkSine">물결선</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input checked="" class="filter-check-box" id="checkSpeechBubble" style="margin-right: 5px;" type="checkbox"><label class="checkbox-label" for="checkSpeechBubble">말풍선</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input checked="" class="filter-check-box" id="checkTextBox" style="margin-right: 5px;" type="checkbox"><label class="checkbox-label" for="checkTextBox">포스트잇</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input checked="" class="filter-check-box" id="checkBookmark" style="margin-right: 5px;" type="checkbox"><label class="checkbox-label" for="checkBookmark">북마크</label>
+          </div>
+        </div>
+      </div>
+      <div class="alert-memo" id="noLoginInfo" style="display: none; margin-bottom: 18px;">
+        <img src="./exclamation-mark.png" style="margin-bottom: 5px;">
+        <p class="font-small">로그인하여 작성하신 필기를 저장하세요.</p>
+        <br>
+        <p class="font-small">
+          비로그인 상태에서 작성한 필기는 저장되지 않습니다.
+        </p>
+        <div style="padding-top: 10px;">
+          <div class="login-button" id="loginButton">
+            로그인 바로가기
+          </div>
+        </div>
+      </div>
+      <div class="alert-memo" id="noAnnotationInfo" style="text-align: left;">
+        <b style="font-size: 14px;">내 노트 작성 TIP!</b>
+        <br>
+        <ul style="padding: 20px;">
+          <li class="font-small pb-5">
+            <span class="description-blue">텍스트를 드래그</span>하여 하이라이트, 밑줄 등 메모를 할 수
+            있습니다.
+          </li>
+          <li class="font-small pb-5">
+            표시, 메모하신 논문은
+            <span class="description-blue">자동으로 내서재에 북마크</span>됩니다.
+          </li>
+          <li class="font-small pb-5">
+            작성한 메모는 <span class="description-blue">내서재&gt;내노트</span>
+            에서 다시 확인하실 수 있습니다.
+          </li>
+        </ul>
+        <img src="./how-to-use.png" style="width: 98%; border: 2px solid black;">
+      </div>
+      <div class="alert-memo" id="noSearchResultInfo" style="display: none; margin-bottom: 18px;">
+        <p class="font-small">
+          검색결과가 없습니다.
+        </p>
+        <br>
+        <p class="font-small">
+          검색 조건(색상, 필터, 검색어)을 다르게 설정해보세요.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="mainContainer">
+    <div class="findbar hidden doorHanger" id="findbar">
+      <div id="findbarInputContainer">
+        <input class="toolbarField" data-l10n-id="find_input" id="findInput" placeholder="문서에서 찾기…" tabindex="91" title="찾기" type="search">
+        <div class="splitToolbarButton">
+          <button class="toolbarButton findPrevious" data-l10n-id="find_previous" id="findPrevious" tabindex="92" title="지정 문자열에 일치하는 1개 부분을 검색">
+            <!-- <span data-l10n-id="find_previous_label">Previous</span> -->
+            <span class="arrow-span">▲</span>
+          </button>
+          <div class="splitToolbarButtonSeparator"></div>
+          <button class="toolbarButton findNext" data-l10n-id="find_next" id="findNext" tabindex="93" title="지정 문자열에 일치하는 다음 부분을 검색">
+            <span class="arrow-span">▼</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="findbarOptionsOneContainer">
+        <input class="toolbarField" id="findHighlightAll" tabindex="94" type="checkbox">
+        <label class="toolbarLabel" data-l10n-id="find_highlight" for="findHighlightAll">모두 강조 표시</label>
+        <input class="toolbarField" id="findMatchCase" tabindex="95" type="checkbox">
+        <label class="toolbarLabel" data-l10n-id="find_match_case_label" for="findMatchCase">대/소문자 구분</label>
+      </div>
+      <div id="findbarOptionsTwoContainer">
+        <input class="toolbarField" id="findEntireWord" tabindex="96" type="checkbox">
+        <label class="toolbarLabel" data-l10n-id="find_entire_word_label" for="findEntireWord">단어 단위로</label>
+        <span class="toolbarLabel hidden" id="findResultsCount"></span>
+      </div>
+
+      <div id="findbarMessageContainer">
+        <span class="toolbarLabel" id="findMsg"></span>
+      </div>
+    </div>
+    <!-- findbar -->
+
+    <div class="secondaryToolbar hidden doorHangerRight" id="secondaryToolbar">
+      <div id="secondaryToolbarButtonContainer">
+        <button class="secondaryToolbarButton presentationMode visibleLargeView" data-l10n-id="presentation_mode" id="secondaryPresentationMode" tabindex="51" title="프레젠테이션 모드로 전환">
+              <span data-l10n-id="presentation_mode_label">프레젠테이션 모드</span>
+        </button>
+
+        <button class="secondaryToolbarButton openFile visibleLargeView" data-l10n-id="open_file" id="secondaryOpenFile" tabindex="52" title="파일 열기">
+          <span data-l10n-id="open_file_label">열기</span>
+        </button>
+
+        <button class="secondaryToolbarButton print visibleMediumView" data-l10n-id="print" id="secondaryPrint" tabindex="53" title="인쇄">
+          <span data-l10n-id="print_label">인쇄</span>
+        </button>
+
+        <button class="secondaryToolbarButton download visibleMediumView" data-l10n-id="download" id="secondaryDownload" tabindex="54" title="다운로드">
+          <span data-l10n-id="download_label">다운로드</span>
+        </button>
+
+        <a class="secondaryToolbarButton bookmark visibleSmallView" data-l10n-id="bookmark" href="https://www.dbpia.co.kr/pdfviewer/web/viewer.html?file=https%3A%2F%2Fwww.dbpia.co.kr%2Fpdf%2FpdfProxy.do%3FpdfUrl%3Dhttps%3A%2F%2Fdownload.dbpia.co.kr%2FFile%2FDownload%3Fkey%3D9168891032#page=1&amp;zoom=100,-7,842" id="secondaryViewBookmark" tabindex="55" title="현재 보기 (복사 또는 새 창에 열기)">
+          <span data-l10n-id="bookmark_label">현재 보기</span>
+        </a>
+
+        <div class="horizontalToolbarSeparator visibleLargeView"></div>
+
+        <button class="secondaryToolbarButton firstPage" data-l10n-id="first_page" id="firstPage" tabindex="56" title="첫 페이지로 이동" disabled="">
+          <span data-l10n-id="first_page_label">첫 페이지로 이동</span>
+        </button>
+        <button class="secondaryToolbarButton lastPage" data-l10n-id="last_page" id="lastPage" tabindex="57" title="마지막 페이지로 이동" disabled="">
+          <span data-l10n-id="last_page_label">마지막 페이지로 이동</span>
+        </button>
+
+        <div class="horizontalToolbarSeparator"></div>
+
+        <button class="secondaryToolbarButton rotateCw" data-l10n-id="page_rotate_cw" id="pageRotateCw" tabindex="58" title="시계방향으로 회전" disabled="">
+          <span data-l10n-id="page_rotate_cw_label">시계방향으로 회전</span>
+        </button>
+        <button class="secondaryToolbarButton rotateCcw" data-l10n-id="page_rotate_ccw" id="pageRotateCcw" tabindex="59" title="시계 반대방향으로 회전" disabled="">
+              <span data-l10n-id="page_rotate_ccw_label">시계 반대방향으로 회전</span>
+        </button>
+
+        <div class="horizontalToolbarSeparator"></div>
+
+        <button class="secondaryToolbarButton selectTool toggled" data-l10n-id="cursor_text_select_tool" id="cursorSelectTool" tabindex="60" title="텍스트 선택 도구 활성화">
+              <span data-l10n-id="cursor_text_select_tool_label">텍스트 선택 도구</span>
+        </button>
+        <button class="secondaryToolbarButton handTool" data-l10n-id="cursor_hand_tool" id="cursorHandTool" tabindex="61" title="손 도구 활성화">
+          <span data-l10n-id="cursor_hand_tool_label">손 도구</span>
+        </button>
+
+        <div class="horizontalToolbarSeparator"></div>
+
+        <button class="secondaryToolbarButton scrollModeButtons scrollVertical toggled" data-l10n-id="scroll_vertical" id="scrollVertical" tabindex="62" title="세로 스크롤 사용">
+              <span data-l10n-id="scroll_vertical_label">세로 스크롤</span>
+        </button>
+        <button class="secondaryToolbarButton scrollModeButtons scrollHorizontal" data-l10n-id="scroll_horizontal" id="scrollHorizontal" tabindex="63" title="가로 스크롤 사용">
+              <span data-l10n-id="scroll_horizontal_label">가로 스크롤</span>
+        </button>
+        <button class="secondaryToolbarButton scrollModeButtons scrollWrapped" data-l10n-id="scroll_wrapped" id="scrollWrapped" tabindex="64" title="래핑(자동 줄 바꿈) 스크롤 사용">
+          <span data-l10n-id="scroll_wrapped_label">래핑 스크롤</span>
+        </button>
+
+        <div class="horizontalToolbarSeparator scrollModeButtons"></div>
+
+        <button class="secondaryToolbarButton spreadModeButtons spreadNone toggled" data-l10n-id="spread_none" id="spreadNone" tabindex="65" title="한 페이지 보기">
+          <span data-l10n-id="spread_none_label">펼쳐짐 없음</span>
+        </button>
+        <button class="secondaryToolbarButton spreadModeButtons spreadOdd" data-l10n-id="spread_odd" id="spreadOdd" tabindex="66" title="홀수 페이지로 시작하는 두 페이지 보기">
+          <span data-l10n-id="spread_odd_label">홀수 펼쳐짐</span>
+        </button>
+        <button class="secondaryToolbarButton spreadModeButtons spreadEven" data-l10n-id="spread_even" id="spreadEven" tabindex="67" title="짝수 페이지로 시작하는 두 페이지 보기">
+          <span data-l10n-id="spread_even_label">짝수 펼쳐짐</span>
+        </button>
+
+        <div class="horizontalToolbarSeparator spreadModeButtons"></div>
+
+        <button class="secondaryToolbarButton documentProperties" data-l10n-id="document_properties" id="documentProperties" tabindex="68" title="문서 속성…">
+              <span data-l10n-id="document_properties_label">문서 속성…</span>
+        </button>
+      </div>
+    </div>
+    <!-- secondaryToolbar -->
+
+    <div class="toolbar">
+      <div id="toolbarContainer">
+        <div id="toolbarViewer">
+          <div id="toolbarViewerLeft">
+            <button aria-controls="sidebarContainer" aria-expanded="true" class="toolbarButton toolbar-text-button toggled" id="sidebarToggle" tabindex="11" title="미리보기 / 목차">
+              <span id="toggleButtonText" style="font-family: &#39;Noto Sans KR&#39;; font-weight: 700;">&lt; 목차 접기</span>
+            </button>
+            <div id="noneArea" style="display: none;">
+              <div class="splitToolbarButton hiddenSmallView"></div>
+            </div>
+          </div>
+          <div id="toolbarViewerMiddle">
+            <div class="popup-box hidden" id="toolbarColorPopupDiv" style="z-index: 501; position: absolute; padding-top: 35px;">
+              <div style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: flex-end;
+                      padding: 7px;
+                    ">
+                <div class="outer-circle">
+                  <div class="inner-circle" style="background-color: #ffe6a2;"></div>
+                </div>
+                <div class="outer-circle">
+                  <div class="inner-circle" style="background-color: #ffcd45;"></div>
+                </div>
+                <div class="outer-circle">
+                  <div class="inner-circle" style="background-color: #f1a099;"></div>
+                </div>
+                <div class="outer-circle">
+                  <div class="inner-circle" style="background-color: #00cc63;"></div>
+                </div>
+                <div class="outer-circle">
+                  <div class="inner-circle" style="background-color: #e44234;"></div>
+                </div>
+              </div>
+              <div class="hidden" id="fontSizeSelectWrapper" style="
+                      padding-left: 7px;
+                      padding-bottom: 7px;
+                      text-align: center;
+                      font-size: 12px;
+                    ">
+                폰트 크기:
+                <select id="fontSizeSelect" style="font-size: 12px;">
+                <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12" selected="">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12" selected="">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12" selected="">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12" selected="">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12" selected="">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option></select>
+              </div>
+            </div>
+
+            <button class="toolbarButton zoomOut" data-l10n-id="zoom_out" id="zoomOutMobile" style="display: none" tabindex="21" title="축소">
+              <span data-l10n-id="zoom_out_label">축소</span>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton highlightText hiddenMediumView annotation-toggle" data-l10n-id="highlightText" id="highlightText" tabindex="33" title="하이라이트">
+              <div class="side-color-pick hidden"></div>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton underlineText hiddenMediumView annotation-toggle" data-l10n-id="underlineText" id="underlineText" tabindex="33" title="밑줄">
+              <div class="side-color-pick hidden"></div>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton sineText hiddenMediumView annotation-toggle" data-l10n-id="sineText" id="sineText" tabindex="33" title="물결선">
+              <div class="side-color-pick hidden"></div>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton speechBubble hiddenMediumView annotation-toggle" data-l10n-id="speechBubble" id="speechBubble" tabindex="33" title="말풍선">
+              <div class="side-color-pick hidden"></div>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton textBox hiddenMediumView annotation-toggle" data-l10n-id="textBox" id="textBox" tabindex="33" title="포스트잇">
+              <div class="side-color-pick hidden"></div>
+            </button>
+
+            <div class="toolbar-button-spacer"></div>
+            <div class="splitToolbarButtonSeparator"></div>
+            <div class="toolbar-button-spacer"></div>
+
+            <button class="top-toolbar-button toolbarButton historyBack hiddenMediumView" data-l10n-id="historyBack" disabled="" id="historyBack" tabindex="33" title="되돌리기">
+              <span data-l10n-id="historyBack_label">HistoryBack</span>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton historyForward hiddenMediumView" data-l10n-id="historyForward" disabled="" id="historyForward" tabindex="33" title="되살리기">
+                  <span data-l10n-id="historyForward_label">HistoryForward</span>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton eraseAnnotation hiddenMediumView" data-l10n-id="eraseAnnotation" id="eraseAnnotation" tabindex="33" title="지우개">
+                  <span data-l10n-id="eraseAnnotation_label">eraseAnnotation</span>
+            </button>
+
+            <button class="toolbarButton zoomIn" data-l10n-id="zoom_in" id="zoomInMobile" style="display: none;" tabindex="22" title="확대">
+              <span data-l10n-id="zoom_in_label">확대</span>
+            </button>
+          </div>
+          <div id="toolbarViewerRight">
+            <button class="top-toolbar-button toolbarButton openFile hiddenLargeView" id="openJson" style="visibility: hidden;" tabindex="32" title="Load Json File">
+              <span>Load Json</span>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton doubleQuotes hiddenLargeView" id="doubleQuotes" tabindex="32" title="논문 인용 정보">
+              <span>doubleQuotes</span>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton copyWithFootnote hiddenLargeView" id="copyWithFootnote" tabindex="32" title="각주와 함께 복사">
+              <span>copyWithFootnote</span>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton openFile hiddenLargeView" data-l10n-id="open_file" id="openFile" style="display: none;" tabindex="32" title="파일 열기">
+              <span data-l10n-id="open_file_label">열기</span>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton print hiddenMediumView" data-l10n-id="print" id="print" style="display: none;" tabindex="33" title="인쇄">
+              <span data-l10n-id="print_label">인쇄</span>
+            </button>
+
+            <button aria-controls="findbar" aria-expanded="false" class="top-toolbar-button toolbarButton" data-l10n-id="findbar" id="viewFind" tabindex="12" title="논문 본문 내 검색">
+              <span data-l10n-id="findbar_label">논문 본문 내 검색</span>
+            </button>
+
+            <button class="top-toolbar-button toolbarButton comment hiddenMediumView middle-toolbar-toggled" data-l10n-id="comment" id="comment" tabindex="33" title="내 메모 보기">
+              <span data-l10n-id="comment_label">Comment</span>
+            </button>
+
+            <div style="display: none;">
+              <button class="top-toolbar-button toolbarButton download hiddenMediumView" data-l10n-id="download" id="download" tabindex="34" title="다운로드">
+                <span data-l10n-id="download_label">다운로드</span>
+              </button>
+              <a class="top-toolbar-button toolbarButton bookmark hiddenSmallView" data-l10n-id="bookmark" href="https://www.dbpia.co.kr/pdfviewer/web/viewer.html?file=https%3A%2F%2Fwww.dbpia.co.kr%2Fpdf%2FpdfProxy.do%3FpdfUrl%3Dhttps%3A%2F%2Fdownload.dbpia.co.kr%2FFile%2FDownload%3Fkey%3D9168891032#page=1&amp;zoom=100,-7,842" id="viewBookmark" tabindex="35" title="현재 보기 (복사 또는 새 창에 열기)">
+                <span data-l10n-id="bookmark_label">현재 보기</span>
+              </a>
+
+              <div class="verticalToolbarSeparator hiddenSmallView"></div>
+
+              <button aria-controls="secondaryToolbar" aria-expanded="false" class="top-toolbar-button toolbarButton" data-l10n-id="tools" id="secondaryToolbarToggle" tabindex="36" title="도구">
+                <span data-l10n-id="tools_label">도구</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="loadingBar" class="hidden">
+          <div class="progress" style="height: 100%; width: 100%;">
+            <div class="glimmer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="viewerContainer" tabindex="0">
+      <div></div>
+
+      <div class="footer">
+        <div class="bottom-toolbar">
+          <div class="text-button">
+            <div class="bottom-toolbar-svg bottom-toolbar-minus fullscreen-disabled" id="zoomOut"></div>
+          </div>
+          <div>
+                <span id="scaleSelectContainer" style="width: 144.088px;">
+                  <select class="toolbarField fullscreen-disabled" id="scaleSelect" title="Zoom" style="width: 70px;">
+                    <option disabled="disabled" hidden="true" id="customScaleOption" title="" value="custom">100%</option>
+                    <option data-l10n-args="{ &quot;scale&quot;: 100 }" data-l10n-id="page_scale_percent" title="" value="1">100%</option>
+                    <option data-l10n-args="{ &quot;scale&quot;: 125 }" data-l10n-id="page_scale_percent" title="" value="1.25">125%</option>
+                    <option data-l10n-args="{ &quot;scale&quot;: 150 }" data-l10n-id="page_scale_percent" title="" value="1.5">150%</option>
+                    <option data-l10n-args="{ &quot;scale&quot;: 200 }" data-l10n-id="page_scale_percent" title="" value="2">200%</option>
+                    <option data-l10n-args="{ &quot;scale&quot;: 300 }" data-l10n-id="page_scale_percent" title="" value="3">300%</option>
+                    <option data-l10n-args="{ &quot;scale&quot;: 400 }" data-l10n-id="page_scale_percent" title="" value="4">400%</option>
+                  </select>
+                </span>
+          </div>
+          <div class="text-button">
+            <div class="bottom-toolbar-svg bottom-toolbar-plus fullscreen-disabled" id="zoomIn"></div>
+          </div>
+          <div class="toolbar-button-spacer"></div>
+          <div class="splitToolbarButtonSeparator"></div>
+          <div class="toolbar-button-spacer"></div>
+          <div class="flex-center">
+            <div class="text-button">
+              <div class="bottom-toolbar-svg bottom-toolbar-left-chevron" id="previous"></div>
+            </div>
+            <input autocomplete="off" class="toolbarField pageNumber" data-l10n-id="page" id="pageNumber" max="0" min="1" size="4" tabindex="15" title="페이지" type="number" value="1">
+            <span class="toolbarLabel" id="numPages" style="color: white;">of 0</span>
+            <div class="text-button">
+              <div class="bottom-toolbar-svg bottom-toolbar-right-chevron" id="next"></div>
+            </div>
+          </div>
+          <div class="toolbar-button-spacer"></div>
+          <div class="splitToolbarButtonSeparator"></div>
+          <div class="toolbar-button-spacer"></div>
+          <div class="flex-center">
+            <div class="text-button">
+              <div class="bottom-toolbar-svg bottom-toolbar-extend-horizontally fullscreen-disabled" id="pageWidth"></div>
+            </div>
+            <div class="text-button">
+              <div class="bottom-toolbar-svg bottom-toolbar-extend-vertically fullscreen-disabled" id="pageFit"></div>
+            </div>
+            <div class="text-button">
+              <div class="bottom-toolbar-svg bottom-toolbar-extend-fully" id="presentationMode"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--#if !MOZCENTRAL-->
+    <div id="errorWrapper">
+      <div id="errorMessageLeft">
+        <span id="errorMessage">An error occurred while loading the PDF.</span>
+        <button data-l10n-id="error_more_info" id="errorShowMore">정보 더 보기</button>
+        <button data-l10n-id="error_less_info" id="errorShowLess" hidden="">정보 간단히 보기</button>
+      </div>
+      <div id="errorMessageRight">
+        <button data-l10n-id="error_close" id="errorClose">닫기</button>
+      </div>
+      <div class="clearBoth"></div>
+      <textarea id="errorMoreInfo" readonly="readonly" hidden="" style="height: 37px;"></textarea>
+    </div>
+    <!--#endif-->
+  </div>
+  <!-- mainContainer -->
+
+  <div class="hidden" id="overlayContainer">
+    <div class="container hidden" id="passwordOverlay">
+      <div class="dialog">
+        <div class="row">
+          <p data-l10n-id="password_label" id="passwordText">이 PDF 파일을 열 수 있는 비밀번호를 입력하세요.</p>
+        </div>
+        <div class="row">
+          <input class="toolbarField" id="password" type="password">
+        </div>
+        <div class="buttonRow">
+          <button class="overlayButton" id="passwordCancel">
+            <span data-l10n-id="password_cancel">취소</span>
+          </button>
+          <button class="overlayButton" id="passwordSubmit">
+            <span data-l10n-id="password_ok">확인</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container hidden" id="documentPropertiesOverlay">
+      <div class="dialog">
+        <div class="row">
+              <span data-l10n-id="document_properties_file_name">파일 이름:</span>
+          <p id="fileNameField">-</p>
+        </div>
+        <div class="row">
+              <span data-l10n-id="document_properties_file_size">파일 크기:</span>
+          <p id="fileSizeField">-</p>
+        </div>
+        <div class="separator"></div>
+        <div class="row">
+          <span data-l10n-id="document_properties_title">제목:</span>
+          <p id="titleField">-</p>
+        </div>
+        <div class="row">
+          <span data-l10n-id="document_properties_author">작성자:</span>
+          <p id="authorField">-</p>
+        </div>
+        <div class="row">
+          <span data-l10n-id="document_properties_subject">주제:</span>
+          <p id="subjectField">-</p>
+        </div>
+        <div class="row">
+          <span data-l10n-id="document_properties_keywords">키워드:</span>
+          <p id="keywordsField">-</p>
+        </div>
+        <div class="row">
+              <span data-l10n-id="document_properties_creation_date">작성 날짜:</span>
+          <p id="creationDateField">-</p>
+        </div>
+        <div class="row">
+              <span data-l10n-id="document_properties_modification_date">수정 날짜:</span>
+          <p id="modificationDateField">-</p>
+        </div>
+        <div class="row">
+          <span data-l10n-id="document_properties_creator">작성 프로그램:</span>
+          <p id="creatorField">-</p>
+        </div>
+        <div class="separator"></div>
+        <div class="row">
+              <span data-l10n-id="document_properties_producer">PDF 변환 소프트웨어:</span>
+          <p id="producerField">-</p>
+        </div>
+        <div class="row">
+              <span data-l10n-id="document_properties_version">PDF 버전:</span>
+          <p id="versionField">-</p>
+        </div>
+        <div class="row">
+              <span data-l10n-id="document_properties_page_count">페이지 수:</span>
+          <p id="pageCountField">-</p>
+        </div>
+        <div class="row">
+              <span data-l10n-id="document_properties_page_size">페이지 크기:</span>
+          <p id="pageSizeField">-</p>
+        </div>
+        <div class="separator"></div>
+        <div class="row">
+              <span data-l10n-id="document_properties_linearized">빠른 웹 보기:</span>
+          <p id="linearizedField">-</p>
+        </div>
+        <div class="buttonRow">
+          <button class="overlayButton" id="documentPropertiesClose">
+            <span data-l10n-id="document_properties_close">닫기</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--#if !MOZCENTRAL-->
+    <div class="container hidden" id="printServiceOverlay">
+      <div class="dialog">
+        <div class="row">
+              <span data-l10n-id="print_progress_message">잠시만 기다려주세요...</span>
+        </div>
+        <div class="row">
+          <progress max="100" value="0"></progress>
+          <span class="relative-progress" data-l10n-args="{ &quot;progress&quot;: 0 }" data-l10n-id="print_progress_percent">0%</span>
+        </div>
+        <div class="buttonRow">
+          <button class="overlayButton" id="printCancel">
+            <span data-l10n-id="print_progress_close">취소</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!--#endif-->
+    <!--#if CHROME-->
+    <!--#include viewer-snippet-chrome-overlays.html-->
+    <!--#endif-->
+  </div>
+  <!-- overlayContainer -->
+</div>
+<!-- outerContainer -->
+<div id="printContainer"></div>
+<div id="textContentPopupDiv" style="
+        z-index: 1000;
+        position: fixed;
+        top: 0px;
+        width: 200px;
+        height: 100px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 5px;
+        box-shadow: 0 0 3px 0 #485056;
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        visibility: hidden;
+      ">
+  <div id="textContentPopupDivAuthor" style="font-weight: 600; margin-bottom: 8px;">
+    Guest
+  </div>
+  <div id="textContentPopupDivText" style="
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+        "></div>
+</div>
+
+<div class="popup-box popup-button-div" id="textSelectionPopupDiv" style="visibility: hidden;">
+  <div class="popup-button-wrapper" id="popupHighlightButton">
+    <div class="popup-button">
+      <div class="popup-icon toolbarButton highlightText hiddenMediumView"></div>
+      <div class="popup-description">
+        하이라이트
+      </div>
+    </div>
+  </div>
+  <div class="popup-button-wrapper" id="popupUnderlineButton">
+    <div class="popup-button">
+      <div class="popup-icon toolbarButton underlineText hiddenMediumView"></div>
+      <div class="popup-description">
+        밑줄
+      </div>
+    </div>
+  </div>
+  <div class="popup-button-wrapper" id="popupSineButton">
+    <div class="popup-button">
+      <div class="popup-icon toolbarButton sineText hiddenMediumView"></div>
+      <div class="popup-description">
+        물결선
+      </div>
+    </div>
+  </div>
+  <div class="popup-button-wrapper" id="popupCopyWithFootnoteButton">
+    <div class="popup-button">
+      <div class="popup-icon toolbarButton copy hiddenMediumView"></div>
+      <div class="popup-description">
+        각주와 함께 복사
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup-box popup-button-div" id="fabricObjectPopupDiv" style="visibility: hidden;">
+  <div class="popup-button-wrapper" id="popupCommentButton">
+    <div class="popup-button">
+      <div class="popup-icon toolbarButton memoComment hiddenMediumView"></div>
+      <div class="popup-description" id="memoWriteOrModifyButton">
+        메모 작성
+      </div>
+    </div>
+  </div>
+  <div class="popup-button-wrapper" id="popupColorButton">
+    <div class="popup-button">
+      <div class="popup-icon toolbarButton palette hiddenMediumView"></div>
+      <div class="popup-description">
+        색상 변경
+      </div>
+    </div>
+  </div>
+  <div class="popup-button-wrapper" id="popupDeleteButton">
+    <div class="popup-button">
+      <div class="popup-icon toolbarButton trashBin hiddenMediumView"></div>
+      <div class="popup-description">
+        삭제
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup-box" id="fabricObjectColorPopupDiv" style="
+        z-index: 100;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        padding: 7px;
+      ">
+  <div class="outer-circle">
+    <div class="inner-circle popup-color-picker" style="background-color: #ffe6a2;"></div>
+  </div>
+  <div class="outer-circle">
+    <div class="inner-circle popup-color-picker" style="background-color: #ffcd45;"></div>
+  </div>
+  <div class="outer-circle">
+    <div class="inner-circle popup-color-picker" style="background-color: #f1a099;"></div>
+  </div>
+  <div class="outer-circle">
+    <div class="inner-circle popup-color-picker" style="background-color: #00cc63;"></div>
+  </div>
+  <div class="outer-circle">
+    <div class="inner-circle popup-color-picker" style="background-color: #e44234;"></div>
+  </div>
+</div>
+
+<div class="popup-box" id="printOptionSelectPopup" style="
+        top: 40%;
+        left: 40%;
+        width: 300px;
+        height: 150px;
+        z-index: 100;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 7px;
+        visibility: hidden;
+      ">
+      <span style="margin-bottom: 5px; font-size: large; font-weight: 600;">프린트 옵션</span>
+  <div style="margin-bottom: 5px;">
+    <input checked="" id="printOnlyPdf" name="printType" onchange="if(this.checked){ window.PDFViewerApplication.pdfPrintWithAnnotation = false }" type="radio">
+    <label for="printOnlyPdf">원본 문서만 인쇄</label>
+  </div>
+  <div style="margin-bottom: 5px;">
+    <input id="printWithAnnotation" name="printType" onchange="if(this.checked){ window.PDFViewerApplication.pdfPrintWithAnnotation = true }" type="radio">
+    <label for="printWithAnnotation">메모와 함께 인쇄</label>
+  </div>
+  <div style="margin-top: 15px;">
+    <button id="doPrint" onclick="window.PDFViewerApplication.triggerPrinting();" style="width: 70px;">
+      인쇄
+    </button>
+    <button id="cancelPrint" onclick="document.getElementById(&#39;printOptionSelectPopup&#39;).style.visibility = &#39;hidden&#39;;" style="width: 70px;">
+      취소
+    </button>
+  </div>
+</div>
+
+<div id="arrowDivWrapper">
+  <div id="arrowDiv1" style="display: none;">
+    <div class="arrow-head"></div>
+  </div>
+  <div id="arrowDiv2" style="display: none;"></div>
+  <div id="arrowDiv3" style="display: none;"></div>
+</div>
+
+<textarea id="clipboard" style="width:0px; height:0px; top: 0px; left: 0px; position: absolute; z-index: -100;"></textarea>
+
+
+<script>
+  // custom.js에 코드 있음
+  window.addEventListener("getPdfMemo", event => {
+    window.PDFViewerApplication.pdfAnnotationList;
+  });
+
+  window.addEventListener("getFnote", event => {
+    window.PDFViewerApplication.pdfAnnotationList;
+  });
+</script>
+
+<input id="fileInput" class="fileInput" type="file"><input id="jsonInput" class="fileInput" type="file"><input id="fileInput" class="fileInput" type="file"><input id="jsonInput" class="fileInput" type="file"><input id="fileInput" class="fileInput" type="file"><input id="jsonInput" class="fileInput" type="file"><input id="fileInput" class="fileInput" type="file"><input id="jsonInput" class="fileInput" type="file"></body></html>
